@@ -80,15 +80,24 @@ class WikiController {
     
     // MARK: - CRUD functions
     
-    func createWiki() {
-        
+    func createWiki(wiki: Wiki) {
+        wikis.append(wiki)
     }
     
-    func updateWiki() {
+    func updateWiki(wiki: Wiki, title: String, snippet: String) {
+        // Find the index of the wiki
+        guard let index = wikis.index(of: wiki) else { return }
         
+        var theTitle = wikis[index].query.search.map {$0.title}
+        theTitle.remove(at: index)
+        theTitle.insert(title, at: index)
+        
+        var theSnippet = wikis[index].query.search.map {$0.snippet}
+        theSnippet.remove(at: index)
+        theSnippet.insert(snippet, at: index)
     }
     
     func deleteWiki() {
-        
+        // Find
     }
 }

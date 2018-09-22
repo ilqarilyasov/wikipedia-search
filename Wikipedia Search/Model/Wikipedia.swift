@@ -8,16 +8,20 @@
 
 import Foundation
 
-struct Wiki: Codable {
+struct Wiki: Codable, Equatable {
     let query: Query
     
-    struct Query: Codable {
+    struct Query: Codable, Equatable {
         let search: [Search]
         
-        struct Search: Codable {
+        struct Search: Codable, Equatable {
             let title: String
-            let pageid: Int
             let snippet: String
+            let pageid: Int
         }
+    }
+    
+    static func == (lhs: Wiki, rhs: Wiki) -> Bool {
+        return lhs.query.search.map {$0.pageid} == rhs.query.search.map {$0.pageid}
     }
 }
