@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOy-PD-bAF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wikipedia-->
+        <scene sceneID="mFa-F4-Wps">
+            <objects>
+                <tableViewController id="MaS-Rb-EIF" customClass="WikiTableViewController" customModule="Wikipedia_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wf0-bq-rwc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WikiCell" rowHeight="81" id="hSq-Ji-jX9" customClass="WikiTableViewCell" customModule="Wikipedia_Search" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hSq-Ji-jX9" id="52M-1L-gma">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bC9-YM-Iao">
+                                            <rect key="frame" x="16" y="8" width="343" height="64.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xN7-P8-vBA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36L-mC-PtZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="299" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWd-tv-4Qf">
+                                                            <rect key="frame" x="307" y="0.0" width="36" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spinnet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikW-NL-fVy">
+                                                    <rect key="frame" x="0.0" y="28.5" width="343" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bC9-YM-Iao" secondAttribute="bottom" constant="8" id="Mvb-Ze-I9y"/>
+                                        <constraint firstAttribute="trailing" secondItem="bC9-YM-Iao" secondAttribute="trailing" constant="16" id="QcS-zC-uml"/>
+                                        <constraint firstItem="bC9-YM-Iao" firstAttribute="leading" secondItem="52M-1L-gma" secondAttribute="leading" constant="16" id="Zwn-Tt-bZS"/>
+                                        <constraint firstItem="bC9-YM-Iao" firstAttribute="top" secondItem="52M-1L-gma" secondAttribute="top" constant="8" id="p1L-wE-NEf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uNW-vz-pwE" kind="show" identifier="TableCellSegue" id="2wD-kB-UJI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MaS-Rb-EIF" id="Rdt-Rv-Cv0"/>
+                            <outlet property="delegate" destination="MaS-Rb-EIF" id="Yj5-yC-z1m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Wikipedia" id="Iea-e5-9vo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="JhL-9a-PFc">
+                            <connections>
+                                <segue destination="fu0-Dl-97V" kind="show" identifier="SearchBarButtonSegue" id="tqO-hc-OiO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doN-jZ-JXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="92.203898050974516"/>
+        </scene>
+        <!--Search Wiki-->
+        <scene sceneID="Ub9-dE-TOR">
+            <objects>
+                <viewController id="fu0-Dl-97V" customClass="SearchViewController" customModule="Wikipedia_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="akc-tt-VzF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-nu-EEY">
+                                <rect key="frame" x="0.0" y="172" width="375" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="219" id="KlH-ec-Fza" customClass="SearchTableViewCell" customModule="Wikipedia_Search" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="219"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KlH-ec-Fza" id="I74-3c-bOg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-dY-aLy">
+                                                    <rect key="frame" x="16" y="16" width="343" height="186.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-kF-Aa8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TaW-VY-mZK">
+                                                            <rect key="frame" x="0.0" y="29.5" width="343" height="119"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD6-8v-AGw">
+                                                            <rect key="frame" x="0.0" y="156.5" width="343" height="30"/>
+                                                            <state key="normal" title="Save"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="nEk-dY-aLy" secondAttribute="bottom" constant="16" id="5ao-pd-NT5"/>
+                                                <constraint firstItem="nEk-dY-aLy" firstAttribute="top" secondItem="I74-3c-bOg" secondAttribute="top" constant="16" id="9kq-dl-Jl5"/>
+                                                <constraint firstItem="nEk-dY-aLy" firstAttribute="leading" secondItem="I74-3c-bOg" secondAttribute="leading" constant="16" id="Rah-7H-5At"/>
+                                                <constraint firstAttribute="trailing" secondItem="nEk-dY-aLy" secondAttribute="trailing" constant="16" id="qkB-0J-aHe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FYi-A1-SMc">
+                                <rect key="frame" x="0.0" y="116" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FYi-A1-SMc" firstAttribute="leading" secondItem="7Um-pk-JbZ" secondAttribute="leading" id="0YK-tn-Xvx"/>
+                            <constraint firstItem="1JT-nu-EEY" firstAttribute="trailing" secondItem="7Um-pk-JbZ" secondAttribute="trailing" id="K6t-2v-nY4"/>
+                            <constraint firstItem="FYi-A1-SMc" firstAttribute="trailing" secondItem="7Um-pk-JbZ" secondAttribute="trailing" id="MzV-Fa-F9l"/>
+                            <constraint firstItem="1JT-nu-EEY" firstAttribute="top" secondItem="FYi-A1-SMc" secondAttribute="bottom" id="aCi-o5-jEY"/>
+                            <constraint firstItem="1JT-nu-EEY" firstAttribute="bottom" secondItem="7Um-pk-JbZ" secondAttribute="bottom" id="oHK-Bp-Svy"/>
+                            <constraint firstItem="FYi-A1-SMc" firstAttribute="top" secondItem="7Um-pk-JbZ" secondAttribute="top" id="oye-g3-SiY"/>
+                            <constraint firstItem="1JT-nu-EEY" firstAttribute="leading" secondItem="7Um-pk-JbZ" secondAttribute="leading" id="ucp-ZH-AoO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Um-pk-JbZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Wiki" id="mZA-a1-Jpo"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="vzr-Cm-7VD" id="FKR-hb-Fc8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcZ-Ar-two" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="vzr-Cm-7VD">
+                    <connections>
+                        <outlet property="delegate" destination="fu0-Dl-97V" id="QmC-bj-oy8"/>
+                        <outlet property="searchContentsController" destination="fu0-Dl-97V" id="Nen-Je-bNZ"/>
+                        <outlet property="searchResultsDataSource" destination="fu0-Dl-97V" id="CjW-RC-LUQ"/>
+                        <outlet property="searchResultsDelegate" destination="fu0-Dl-97V" id="xyk-nd-McN"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1749.5999999999999" y="-201.04947526236884"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="GAv-TT-9GU">
+            <objects>
+                <viewController id="uNW-vz-pwE" customClass="WikiDetailViewController" customModule="Wikipedia_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JHU-e1-reQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QLQ-tp-pJu">
+                                <rect key="frame" x="16" y="132" width="343" height="519"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-3d-Icn">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-uC-SHe">
+                                                <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw5-Io-uKD">
+                                                <rect key="frame" x="307" y="0.0" width="36" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aPZ-HK-FL6">
+                                        <rect key="frame" x="0.0" y="58" width="343" height="461"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91636262690000003" green="0.91636262690000003" blue="0.91636262690000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QLQ-tp-pJu" firstAttribute="top" secondItem="WYQ-nH-Kcp" secondAttribute="top" constant="16" id="JKV-jT-wyj"/>
+                            <constraint firstItem="QLQ-tp-pJu" firstAttribute="leading" secondItem="WYQ-nH-Kcp" secondAttribute="leading" constant="16" id="uO0-9q-11g"/>
+                            <constraint firstItem="WYQ-nH-Kcp" firstAttribute="trailing" secondItem="QLQ-tp-pJu" secondAttribute="trailing" constant="16" id="uYQ-i9-iyK"/>
+                            <constraint firstItem="WYQ-nH-Kcp" firstAttribute="bottom" secondItem="QLQ-tp-pJu" secondAttribute="bottom" constant="16" id="xUH-gE-vLr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WYQ-nH-Kcp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="D0l-DP-F1w">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="a9s-sb-JxO"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fb-5L-vgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="468.21589205397305"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dUG-Xd-nCY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZOy-PD-bAF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8s0-tg-jWj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MaS-Rb-EIF" kind="relationship" relationship="rootViewController" id="Jbo-CL-JfQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJr-Dn-hrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="92"/>
+        </scene>
+    </scenes>
+</document>
