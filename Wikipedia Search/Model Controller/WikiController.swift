@@ -97,7 +97,9 @@ class WikiController {
         theSnippet.insert(snippet, at: index)
     }
     
-    func deleteWiki() {
-        // Find
+    func deleteWiki(wiki: Wiki) {
+        // Find the index of the wiki
+        guard let index = wikis.index(of: wiki) else { return }
+        wikis.remove(at: index)
     }
 }
