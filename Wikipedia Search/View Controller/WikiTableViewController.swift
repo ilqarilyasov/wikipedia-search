@@ -54,10 +54,17 @@ class WikiTableViewController: UITableViewController {
         if segue.identifier == "SearchBarButtonSegue" {
             
             let destionationVC = segue.destination as! SearchViewController
+            destionationVC.wikiController = wikiController
             
         } else if segue.identifier == "TableCellSegue" {
             
             let destinationVC = segue.destination as! WikiDetailViewController
+            destinationVC.wikiController = wikiController
+            
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let theWiki = wikiController.wikis[indexPath.row]
+            
+            destinationVC.wiki = theWiki
         }
     }
 }

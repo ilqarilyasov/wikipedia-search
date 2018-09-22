@@ -10,6 +10,11 @@ import UIKit
 
 class WikiDetailViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var wikiController: WikiController?
+    var wiki: Wiki?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var titleTextView: UITextView!
