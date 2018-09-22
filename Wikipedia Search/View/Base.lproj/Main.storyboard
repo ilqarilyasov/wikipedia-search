@@ -63,6 +63,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="wikiDateLabel" destination="bWd-tv-4Qf" id="yy5-1q-rX1"/>
+                                    <outlet property="wikiSpinnetLabel" destination="ikW-NL-fVy" id="jsz-6U-KMj"/>
+                                    <outlet property="wikiTitleLabel" destination="36L-mC-PtZ" id="2CM-eu-uga"/>
                                     <segue destination="uNW-vz-pwE" kind="show" identifier="TableCellSegue" id="2wD-kB-UJI"/>
                                 </connections>
                             </tableViewCell>
@@ -106,7 +109,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-dY-aLy">
                                                     <rect key="frame" x="16" y="16" width="343" height="186.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-kF-Aa8">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-kF-Aa8">
                                                             <rect key="frame" x="0.0" y="0.0" width="343" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                             <nil key="textColor"/>
@@ -122,6 +125,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sD6-8v-AGw">
                                                             <rect key="frame" x="0.0" y="156.5" width="343" height="30"/>
                                                             <state key="normal" title="Save"/>
+                                                            <connections>
+                                                                <action selector="saveButtonTapped:" destination="KlH-ec-Fza" eventType="touchUpInside" id="Gyk-Ak-pDZ"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -133,6 +139,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="nEk-dY-aLy" secondAttribute="trailing" constant="16" id="qkB-0J-aHe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="searchTextView" destination="TaW-VY-mZK" id="fHf-Ba-z92"/>
+                                            <outlet property="searchTitleLabel" destination="9oI-kF-Aa8" id="ONA-1f-0Zw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -219,8 +229,17 @@
                         <viewLayoutGuide key="safeArea" id="WYQ-nH-Kcp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="D0l-DP-F1w">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="a9s-sb-JxO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="a9s-sb-JxO">
+                            <connections>
+                                <action selector="saveBarButtonTapped:" destination="uNW-vz-pwE" id="VUG-Wp-nI8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="qw5-Io-uKD" id="ObF-CH-8oj"/>
+                        <outlet property="spinnetTextView" destination="aPZ-HK-FL6" id="FDL-ny-YoJ"/>
+                        <outlet property="titleTextView" destination="h5F-uC-SHe" id="bKD-Cn-lSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fb-5L-vgz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

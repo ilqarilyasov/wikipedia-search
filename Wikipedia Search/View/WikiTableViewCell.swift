@@ -10,4 +10,10 @@ import UIKit
 
 class WikiTableViewCell: UITableViewCell {
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var wikiTitleLabel: UILabel!
+    @IBOutlet weak var wikiDateLabel: UILabel!
+    @IBOutlet weak var wikiSpinnetLabel: UILabel!
+    
 }

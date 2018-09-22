@@ -9,7 +9,9 @@
 import UIKit
 
 class WikiTableViewController: UITableViewController {
-
+    
+    // MARK: - Application lifecycle functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

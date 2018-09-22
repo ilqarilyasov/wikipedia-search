@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				827B40012155DDB800A4207D /* Main.storyboard */,
-				827B401A2155EB2A00A4207D /* SearchTableViewCell.swift */,
 				827B40182155EB0B00A4207D /* WikiTableViewCell.swift */,
+				827B401A2155EB2A00A4207D /* SearchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,9 +107,9 @@
 		827B401E2155EC4D00A4207D /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				827B40162155EAEF00A4207D /* WikiDetailViewController.swift */,
-				827B40142155EADB00A4207D /* SearchViewController.swift */,
 				827B40122155EAC100A4207D /* WikiTableViewController.swift */,
+				827B40142155EADB00A4207D /* SearchViewController.swift */,
+				827B40162155EAEF00A4207D /* WikiDetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";

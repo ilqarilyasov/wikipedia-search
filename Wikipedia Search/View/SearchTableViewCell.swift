@@ -10,4 +10,14 @@ import UIKit
 
 class SearchTableViewCell: UITableViewCell {
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var searchTitleLabel: UILabel!
+    @IBOutlet weak var searchTextView: UITextView!
+    
+    // MARK: - Actions
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
+    
 }

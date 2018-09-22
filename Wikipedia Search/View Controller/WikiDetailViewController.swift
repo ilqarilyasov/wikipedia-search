@@ -9,10 +9,22 @@
 import UIKit
 
 class WikiDetailViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var titleTextView: UITextView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var spinnetTextView: UITextView!
+    
+    // MARK: - App lifecycle functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - Actions
+    
+    @IBAction func saveBarButtonTapped(_ sender: Any) {
+    }
     
 }

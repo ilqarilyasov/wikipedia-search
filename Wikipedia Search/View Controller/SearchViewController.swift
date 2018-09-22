@@ -10,6 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
 
+    // MARK: - Application lifecycle functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
