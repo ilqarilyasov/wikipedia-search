@@ -12,7 +12,9 @@ class WikiTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    var wiki: Wiki?
+    var wiki: Wiki? {
+        didSet { updateViews() }
+    }
     
     // MARK: - Outlets
     
@@ -22,12 +24,15 @@ class WikiTableViewCell: UITableViewCell {
     
     private func updateViews() {
         
-//        if let wiki = wiki {
-//            wikiTitleLabel.text =
-//            wikiDateLabel.text =
-//            wikiSpinnetLabel.text =
-//
-//        }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        
+        if let wiki = wiki {
+            wikiTitleLabel.text = wiki.title
+            wikiDateLabel.text = formatter.string(from: wiki.timestamp)
+            wikiSpinnetLabel.text = wiki.snippet
+
+        }
     }
     
 }

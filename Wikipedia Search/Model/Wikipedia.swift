@@ -42,6 +42,10 @@ struct Wiki: Codable, Equatable {
         return Int(pageid)!
     }
     
+    // Date property
+    
+    let timestamp = Date()
+    
     // MARK: - Equtable protocol stubs
     
     static func == (lhs: Wiki, rhs: Wiki) -> Bool {

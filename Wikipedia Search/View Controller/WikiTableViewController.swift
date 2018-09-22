@@ -50,7 +50,14 @@ class WikiTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "SearchBarButtonSegue" {
+            
+            let destionationVC = segue.destination as! SearchViewController
+            
+        } else if segue.identifier == "TableCellSegue" {
+            
+            let destinationVC = segue.destination as! WikiDetailViewController
+        }
     }
 }
