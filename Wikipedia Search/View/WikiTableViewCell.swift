@@ -10,10 +10,24 @@ import UIKit
 
 class WikiTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
+    
+    var wiki: Wiki?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var wikiTitleLabel: UILabel!
     @IBOutlet weak var wikiDateLabel: UILabel!
     @IBOutlet weak var wikiSpinnetLabel: UILabel!
+    
+    private func updateViews() {
+        
+//        if let wiki = wiki {
+//            wikiTitleLabel.text =
+//            wikiDateLabel.text =
+//            wikiSpinnetLabel.text =
+//
+//        }
+    }
     
 }

@@ -24,11 +24,14 @@ class WikiTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return wikiController.wikis.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WikiCell", for: indexPath) as? WikiTableViewCell else { return UITableViewCell() }
+        let wiki = wikiController.wikis[indexPath.row]
+        
+        cell.wiki = wiki
         
         return cell
     }
@@ -37,11 +40,11 @@ class WikiTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            
+            let theWiki = wikiController.wikis[indexPath.row]
+            wikiController.deleteWiki(wiki: theWiki)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }  
     }
     
     // MARK: - Navigation
