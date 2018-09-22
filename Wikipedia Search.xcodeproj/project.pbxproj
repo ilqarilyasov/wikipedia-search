@@ -66,8 +66,8 @@
 		827B3FFC2155DDB800A4207D /* Wikipedia Search */ = {
 			isa = PBXGroup;
 			children = (
-				827B40212155EC6600A4207D /* Model Controller */,
 				827B401C2155EC3100A4207D /* Model */,
+				827B40212155EC6600A4207D /* Model Controller */,
 				827B401D2155EC4100A4207D /* View */,
 				827B401E2155EC4D00A4207D /* View Controller */,
 				827B400F2155DDC300A4207D /* Resources */,

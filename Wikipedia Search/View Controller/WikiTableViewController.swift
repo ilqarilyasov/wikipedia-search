@@ -10,11 +10,14 @@ import UIKit
 
 class WikiTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    
+    let wikiController = WikiController()
+    
     // MARK: - Application lifecycle functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 

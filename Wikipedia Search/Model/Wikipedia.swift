@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Wikipedia: Codable {
+struct Wiki: Codable {
     let query: Query
     
     struct Query: Codable {
