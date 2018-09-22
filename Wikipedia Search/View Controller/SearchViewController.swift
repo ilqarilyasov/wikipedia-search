@@ -9,12 +9,25 @@
 import UIKit
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
+    
+    // MARK: - Properties
+    
+    var wikiController: WikiController?
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var searchTableView: UITableView!
 
     // MARK: - Application lifecycle functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    // MARK: - Search Bar Delegate
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+
     }
     
 }

@@ -18,6 +18,8 @@ class SearchTableViewCell: UITableViewCell {
     // MARK: - Actions
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        
     }
+
     
 }
